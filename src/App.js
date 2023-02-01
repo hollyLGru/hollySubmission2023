@@ -1,22 +1,28 @@
-import React, { useState} from "react";
+import React, { useState, useEffect} from "react";
 import "./App.css";
-import CarPage from './components/CarPage'
 
 function App() {
   const [vin, setVin] = useState([]);
   const [vinProp, setVinProp] = useState("");
+  const [carData, setCarData] = useState(null);
 
   const handleChange = (event) => {
     setVin(event.target.value);
   };
 
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    setVinProp(...vin);
-
+    setVinProp(vin);
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+        const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=2011`);
+        const newData = await response.json();
+        setCarData(newData);
+    };
+    fetchData();
+    }, [vinProp]);
 
     return (
       <div>
@@ -27,7 +33,6 @@ function App() {
           </label>
         <input type="submit" value="submit" />
       </form>
-    <CarPage vinProp={vinProp}/> 
 
     </div>
     );

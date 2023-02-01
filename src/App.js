@@ -24,6 +24,7 @@ function App() {
     fetchData();
     }, [vinProp]);
 
+
     return (
       <div>
         <form onSubmit={handleSubmit}>
@@ -31,9 +32,12 @@ function App() {
             VIN #: 
             <input onChange={handleChange} type="text" name="vin" placeholder="insert VIN number" value={vin} />
           </label>
-        <input type="submit" value="submit" />
-      </form>
+          <input type="submit" value="submit" />
+        </form>
 
+        <ol>
+
+        </ol>
     </div>
     );
 }

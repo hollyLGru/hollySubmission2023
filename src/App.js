@@ -9,9 +9,11 @@ function App() {
     setVin(event.target.value);
   };
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
   };
+
 
     return (
       <div>
@@ -22,7 +24,7 @@ function App() {
           </label>
         <input type="submit" value="submit" />
       </form>
-    <CarPage /> 
+    <CarPage myVin={vin}/> 
 
     </div>
     );

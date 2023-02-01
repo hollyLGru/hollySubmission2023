@@ -5,13 +5,14 @@
 //     const [vin] = useState(props);
 
 //     useEffect(() => {
-//     const fetchData = async () => {
-//         const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/3fadp4ej9bm198265?format=json&modelyear=2011`);
-//         const newData = await response.json();
-//         setCarData(newData)
-//     };
-//     fetchData();
-//     }, []);
+//         console.log(vin)
+//         const fetchData = async () => {
+//             const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vin}?format=json&modelyear=2011`);
+//             const newData = await response.json();
+//             setCarData(newData)
+//         };
+//         fetchData();
+//         }, [vin]);
 
 //     console.log(carData)
 // // calls api, returns values based on submitted VIN #. 

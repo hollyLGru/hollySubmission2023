@@ -3,8 +3,8 @@ import "./App.css";
 // import CarPage from './components/CarPage'
 
 function App() {
-    const [vin, setVin] = useState([]);
-    const [carData, setCarData] = useState(null);
+  const [vin, setVin] = useState([]);
+  const [carData, setCarData] = useState(null);
 
   const handleChange = (event) => {
     setVin(event.target.value);
@@ -14,7 +14,9 @@ function App() {
     event.preventDefault();
     // console.log(vin);
   };
-
+  
+    // useEffect function calls api, returns values based on submitted VIN #. 
+    // Data about specific car is saved in variable 'carData'
     useEffect(() => {
       console.log(vin)
     const fetchData = async () => {
@@ -23,11 +25,9 @@ function App() {
         setCarData(newData)
     };
     fetchData();
+    console.log(carData)
     }, [vin]);
 
-    // console.log(carData)
-// calls api, returns values based on submitted VIN #. 
-// Data about specific car is saved in variable 'carData'
 
     return (
       <div>
@@ -38,10 +38,6 @@ function App() {
           </label>
         <input type="submit" value="vin" />
       </form>
-      {/* <CarPage vin={vin} /> */}
-
-
-
     </div>
     );
 }

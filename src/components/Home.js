@@ -1,11 +1,12 @@
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
+import CarPage from './CarPage'
 
 
 function Home() {
   const [vin, setVin] = useState([]);
   const [vinProp, setVinProp] = useState("");
-  const [carData, setCarData] = useState(null);
+
 
   const handleChange = (event) => {
     setVin(event.target.value);
@@ -16,22 +17,20 @@ function Home() {
     setVinProp(vin);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-        const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=2011`);
-        const newData = await response.json();
-        setCarData(newData);
-    };
-    fetchData();
-    }, [vinProp]);
-
 
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <h1 style={{ fontSize: "200%", textAlign: "center", color: 'black', marginTop: '2%', letterSpacing: "0.2em", textShadow: "2px 2px 3px grey" }}>
+          <h1 style={{ 
+            fontSize: "200%", 
+            textAlign: "center", 
+            color: 'black', 
+            marginTop: '2%', 
+            letterSpacing: "0.2em", 
+            textShadow: "2px 2px 3px grey" }}>
             Search By Your Vehicle's Vin Number 
           </h1>
+
             <div style={{textAlign: "center"}}>
               <TextField
                 required
@@ -42,6 +41,7 @@ function Home() {
                 type="text"
                 style={{margin: '1%', width: "30%"}}
               />
+
               <Button
                 type="submit"
                 className="login-button"
@@ -60,9 +60,8 @@ function Home() {
             </div>
         </form>
 
-        <ol>
+        <CarPage vinProp={vinProp}/>
 
-        </ol>
     </div>
     );
 }

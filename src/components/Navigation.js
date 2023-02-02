@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <AppBar position="relative" style={{backgroundColor: "#388e9c", padding: "1%"}}>
       <Toolbar style={{fontSize: '120%'}}>
-      <DirectionsCarIcon style={{fontSize: '200%', marginRight: "1%"}}/>
+        <DirectionsCarIcon style={{fontSize: '200%', marginRight: "1%"}}/>
         <Typography variant="h4" style={{ flexGrow: "8", fontWeight: "bold", letterSpacing: "0.4em" }}>
           VinTracker. 
         </Typography>
@@ -24,14 +24,9 @@ const Navigation = () => {
           </li>
           <li
             className="nav-list-item"
-            onClick={() => {
-              document.cookie = cookie.serialize("loggedIn", null, {
-                maxAge: 0,
-              });
-              navigate("/login");
-            }}
-          >
-            Logout
+            onClick={() => {document.cookie = cookie.serialize("loggedIn", null, {maxAge: 0,});
+            navigate("/login")}}>
+                Logout
           </li>
         </ul>
       </Toolbar>

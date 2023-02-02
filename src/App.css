@@ -10,10 +10,6 @@
   gap: 15px
 }
 
-.login-button {
-  background-color: orange;
-}
-
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -49,7 +45,8 @@ ul {
 }
 
 .nav-list-item:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.5);
+  color: gold;
 }
 
 .nav-list-item:hover {

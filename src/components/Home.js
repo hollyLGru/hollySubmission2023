@@ -29,7 +29,7 @@ function Home() {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <h1 style={{ textAlign: "center", color: 'grey', marginTop: '2%' }}>
+          <h1 style={{ fontSize: "200%", textAlign: "center", color: 'black', marginTop: '2%', letterSpacing: "0.2em", textShadow: "2px 2px 3px grey" }}>
             Search By Your Vehicle's Vin Number 
           </h1>
             <div style={{textAlign: "center"}}>
@@ -49,7 +49,7 @@ function Home() {
                 color="primary"
                 style={{
                   borderRadius: 35,
-                  backgroundColor: "#2abfc7",
+                  backgroundColor: "#a3741d",
                   marginTop: "1%",
                   padding: "12px 30px",
                   fontSize: "18px",

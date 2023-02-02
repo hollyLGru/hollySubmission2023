@@ -54,7 +54,7 @@ const Login = () => {
             variant="contained"
             style={{
                 borderRadius: 35,
-                backgroundColor: "#2abfc7",
+                backgroundColor: "brown",
                 padding: "12px 30px",
                 fontSize: "18px"
             }}

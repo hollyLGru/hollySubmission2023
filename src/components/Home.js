@@ -4,8 +4,8 @@ import CarPage from './CarPage'
 
 
 function Home() {
-  const [vin, setVin] = useState([]);
-  const [vinProp, setVinProp] = useState("");
+  const [vin, setVin] = useState("");
+  const [vinProp, setVinProp] = useState(null);
 
 
   const handleChange = (event) => {
@@ -17,6 +17,7 @@ function Home() {
     setVinProp(vin);
   };
 
+  
 
     return (
       <div>
@@ -59,8 +60,7 @@ function Home() {
               </Button>
             </div>
         </form>
-
-        <CarPage vinProp={vinProp}/>
+        <CarPage vinProp={vinProp} handleSubmit={handleSubmit}/>
 
     </div>
     );

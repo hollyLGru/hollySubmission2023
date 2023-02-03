@@ -8,13 +8,16 @@ function Home() {
   const [vin, setVin] = useState("");
   const [vinProp, setVinProp] = useState(null);
   const [clicked, setClicked] = useState(false);
-  // const [date, setDate] = useState("")
+  const [year, setYear] = useState("");
 
 
 
   const handleChange = (event) => {
     setVin(event.target.value);
-    // setDate(event.target.value)
+  };
+
+  const handleYearChange= (event) => {
+    setYear(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -26,14 +29,12 @@ function Home() {
   
 
     return (
-      <div><form onSubmit={handleSubmit}>
+      <div style={{marginTop: "6%"}}><form onSubmit={handleSubmit}>
         <h1 style={{ 
           fontSize: "200%", 
           textAlign: "center", 
           color: 'black', 
-          marginTop: '2%', 
-          letterSpacing: "0.2em", 
-          textShadow: "2px 2px 3px grey" }}>
+          letterSpacing: "0.2em" }}>
           Search By Your Vehicle's Vin Number 
         </h1>
 
@@ -47,18 +48,16 @@ function Home() {
               type="text"
               style={{margin: '1%', width: "30%"}}
             />
-{/* 
+
             <TextField
               required
-              onChange={handleChange}
-              value={date}
-              name="date"
-              label="insert model date"
+              onChange={handleYearChange}
+              value={year}
+              name="year"
+              label="Make Year"
               type="text"
-              style={{margin: '1%', width: "30%"}}
-            /> */}
-
-
+              style={{margin: '1%', width: "10%"}}
+            />
 
             <Button
               type="submit"
@@ -67,7 +66,7 @@ function Home() {
               color="primary"
               style={{
                 borderRadius: 35,
-                backgroundColor: "#a3741d",
+                backgroundColor: "red",
                 marginTop: "1%",
                 padding: "12px 30px",
                 fontSize: "18px",
@@ -77,7 +76,8 @@ function Home() {
             </Button>
           </div>
       </form>
-        <CarPage vinProp={vinProp} handleSubmit={handleSubmit} clicked={clicked}/>
+        <CarPage vinProp={vinProp} handleSubmit={handleSubmit} clicked={clicked} year={year}/>
+
 
     </div>
     );

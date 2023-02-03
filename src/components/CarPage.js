@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import CarImages from './CarImages'
 
-function CarPage({vinProp, handleSubmit, clicked}) {
+function CarPage({vinProp, handleSubmit, clicked, year}) {
     const [carData, setCarData] = useState([]);
 
     // calls api, returns values based on submitted VIN #. 
     // Data about specific car is saved in variable 'carData'
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=2011`);
+            const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=${year}`);
             const newData = await response.json();
             setCarData(newData.Results);
         };
@@ -29,16 +29,13 @@ function CarPage({vinProp, handleSubmit, clicked}) {
                  }}>Results for Vin Number: {vinProp}</h3>
                 <div style={{
                     display: 'flex', 
-                    justifyContent: "center", 
-                    width: "80%", 
-                    marginLeft: "2%", 
-                    marginRight: "5%"}}>
+                    justifyContent: "center"}}>
 
                     <CarImages/>
                     <ul style={{margin: "2%"}}> 
                         <li>Make : {carData[7].Value} </li>
                         <li>Model : {carData[9].Value}</li>
-                        <li>Body STYLE: {carData[23].Value} </li>
+                        <li>Body style: {carData[23].Value} </li>
                         <li>Doors : {carData[24].Value}</li>
                         <li>Series : {carData[12].Value}</li>
                     </ul> 

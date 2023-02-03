@@ -1,13 +1,51 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ /* background-Image: url('vinTracker.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-position: center center; */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.font-link{
+  font-family: 'Sarina', cursive;
+}
+
+
+.font-link2{
+  font-family: 'Inconsolata', monospace;
+}
+
+a:link {
+  text-decoration: none
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  /* put text decoration  */
+  color: red;
+  font-weight: bold;
+}
+
+ul {
+  gap: 30px;
+  padding-inline-start: 20px;
+}
+
+
+li {
+  list-style-type: none;
+  margin: auto 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 50%;
+  gap: 15px
 }

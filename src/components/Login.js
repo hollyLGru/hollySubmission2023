@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div className="App">
+    <div>
       <Container maxWidth="sm">
         <form className="login-form" onSubmit={login}>
           <TextField
@@ -54,9 +54,9 @@ const Login = () => {
             variant="contained"
             style={{
                 borderRadius: 35,
-                backgroundColor: "brown",
+                backgroundColor: "red",
                 padding: "12px 30px",
-                fontSize: "18px"
+                fontSize: "50%"
             }}
           >
             Login

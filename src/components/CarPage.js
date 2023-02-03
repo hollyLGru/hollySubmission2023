@@ -37,7 +37,7 @@ function CarPage({vinProp, handleSubmit, clicked}) {
                     <CarImages/>
                     <ul style={{margin: "2%"}}> 
                         <li>Make : {carData[7].Value} </li>
-                        <li>Model : {carData[10].Value}</li>
+                        <li>Model : {carData[9].Value}</li>
                         <li>Body STYLE: {carData[23].Value} </li>
                         <li>Doors : {carData[24].Value}</li>
                         <li>Series : {carData[12].Value}</li>

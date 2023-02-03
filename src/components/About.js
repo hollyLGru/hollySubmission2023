@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container} from "@mui/material";
-
+import mepic from './mepic.png'
 
 class About extends Component {
 
@@ -11,17 +11,18 @@ class About extends Component {
         <Container maxWidth="md">
           <h1 style={{fontSize: "200%", textAlign: "center", color: 'black', marginTop: '5%', letterSpacing: "0.2em", textShadow: "2px 2px 3px grey"  }}>About VinTracker</h1>
           <div >
-            <img src="https://media.licdn.com/dms/image/D5603AQGd6pu_m-Fm-A/profile-displayphoto-shrink_800_800/0/1666811894139?e=1680739200&v=beta&t=G5KBSSaHIqS1rXu8f33Dn-7eTdp9pdSBbwx--FyytwA" 
+            <img src={mepic}
               id="profile-pic" 
               alt="Head shot of Me"
               style={{
                 width: '20%',
                 borderRadius: "50%",
                 padding: "2%",
+
                 float: "left"
               }}></img>
           <p style={{color: "black"}}>
-            VinTracker was developed to make accessing users car details simple! Do you have your vin number 
+            VinTracker was developed to make accessing users car details simple! Do you have your vehicle identification number 
             but cannot remember the make or model of you car? Well thats pretty freakin' strange but here at VinTracker, 
             we never judge the obsecure and unsual circumstances of our users! This web application was built by the future
             professional developer, Holly Grudovich. It was no easy task, as she was battling post vacation blues
@@ -36,7 +37,7 @@ class About extends Component {
              water that streamed from their faucets. While the fruits of her labor may not be asthetically pleasing
               (or written in typescript... whoops! I will learn!),
              they are functional and she is grateful to have contributed to the growing population of car owners who 
-             can access their vin numbers.  
+             can access their vehicle identification numbers.  
           </p>
           </div>
         </Container>

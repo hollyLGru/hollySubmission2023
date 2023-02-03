@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import CarPage from './CarPage'
+import YearPicker from "react-year-picker";
 
 
 function Home() {
   const [vin, setVin] = useState("");
   const [vinProp, setVinProp] = useState(null);
   const [clicked, setClicked] = useState(false);
+  // const [date, setDate] = useState("")
+
 
 
   const handleChange = (event) => {
     setVin(event.target.value);
+    // setDate(event.target.value)
   };
 
   const handleSubmit = (event) => {
@@ -43,6 +47,18 @@ function Home() {
               type="text"
               style={{margin: '1%', width: "30%"}}
             />
+{/* 
+            <TextField
+              required
+              onChange={handleChange}
+              value={date}
+              name="date"
+              label="insert model date"
+              type="text"
+              style={{margin: '1%', width: "30%"}}
+            /> */}
+
+
 
             <Button
               type="submit"

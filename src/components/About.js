@@ -7,19 +7,20 @@ class About extends Component {
 
   render() {
     return (
-      <div className="text-gray">
-        <Container maxWidth="sm">
+      <div className="text-gray" style={{marginBottom: "25%"}}>
+        <Container maxWidth="md">
           <h3
            style={{
             fontSize: "200%", 
             textAlign: "center", 
             marginTop: '5%', 
             letterSpacing: "0.2em", 
+            fontFamily: `'Fira Sans Extra Condensed', sans-serif`
             // textShadow: "2px 2px 3px grey"  
             }}>About VinTracker</h3>
 
           <div >
-            <img src={mepic}
+            <img src={mepic} alt=""
               style={{
                 width: '20%',
                 borderRadius: "50%",
@@ -27,7 +28,7 @@ class About extends Component {
                 float: "left"
               }}></img>
 
-            <p style={{color: "black"}}>
+            <p style={{color: "black", fontFamily: `'Fira Sans Extra Condensed', sans-serif`, lineHeight: '1.6'}}>
               VinTracker was developed to make accessing users car details simple! Do you have your vehicle identification number 
               but cannot remember the make or model of you car? Well thats pretty freakin' strange but here at VinTracker, 
               we never judge the obsecure and unsual circumstances of our users! This web application was built by the future

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import cookie from "cookie";
+import carLogo from './carLogo.gif'
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -10,8 +11,13 @@ const Navigation = () => {
       <div style={{display: "flex"}}>
         <img 
           style={{ width: "50%"}}
-          src="https://www.bscamerica.com/wp-content/uploads/2022/04/NEWBSCwheels3.gif"/> 
-          <h1 className="font-link" style={{float: "right", paddingTop: "1%", paddingLeft: "2%", letterSpacing: "0.5em", fontSize: "250%"}}>VinTracker</h1>
+          src={carLogo} alt=""/> 
+          <h1 className="font-link" style={{
+            float: "right", 
+            paddingTop: "1%", 
+            paddingLeft: "2%", 
+            letterSpacing: "0.5em", 
+            fontSize: "250%"}}>VinTracker</h1>
         </div>
       <div style={{paddingBottom:"2%", display: "flex", justifyContent: "right", paddingRight: "5%"}}>
       <ul className="font-link2" style={{display: "flex", paddingTop: "-5%"}}>
@@ -21,7 +27,8 @@ const Navigation = () => {
           <li>
             <Link to="/about">About</Link>
           </li>
-          <li  onClick={() => {document.cookie = cookie.serialize("loggedIn", null, {maxAge: 0,}); navigate("/login")}}>
+          <li  className="logOutButton"
+          onClick={() => {document.cookie = cookie.serialize("loggedIn", null, {maxAge: 0,}); navigate("/login")}}>
             Logout
           </li>
         </ul>

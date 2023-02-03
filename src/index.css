@@ -25,10 +25,16 @@ a:visited {
   text-decoration: none;
 }
 
+
 a:hover {
-  /* put text decoration  */
   color: red;
   font-weight: bold;
+}
+
+.logOutButton:hover {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 ul {
@@ -40,6 +46,7 @@ ul {
 li {
   list-style-type: none;
   margin: auto 20px;
+  font-size: 110%;
 }
 
 .login-form {

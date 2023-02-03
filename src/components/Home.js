@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import CarPage from './CarPage'
-import YearPicker from "react-year-picker";
+
 
 
 function Home() {
@@ -9,6 +9,7 @@ function Home() {
   const [vinProp, setVinProp] = useState(null);
   const [clicked, setClicked] = useState(false);
   const [year, setYear] = useState("");
+  const [chosenYear, setChosenYear] =  useState("");
 
 
 
@@ -24,13 +25,14 @@ function Home() {
     event.preventDefault();
     setVinProp(vin);
     setClicked(true)
+    setChosenYear(year)
   };
 
-  
 
     return (
       <div style={{marginTop: "6%"}}><form onSubmit={handleSubmit}>
         <h1 style={{ 
+          fontFamily: `'Fira Sans Extra Condensed', sans-serif`,
           fontSize: "200%", 
           textAlign: "center", 
           color: 'black', 
@@ -76,7 +78,7 @@ function Home() {
             </Button>
           </div>
       </form>
-        <CarPage vinProp={vinProp} handleSubmit={handleSubmit} clicked={clicked} year={year}/>
+        <CarPage vinProp={vinProp} handleSubmit={handleSubmit} clicked={clicked} chosenYear={chosenYear}/>
 
 
     </div>

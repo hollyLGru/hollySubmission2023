@@ -22,8 +22,7 @@ function Home() {
   
 
     return (
-      <div> {clicked ? ""
-        : <form onSubmit={handleSubmit}>
+      <div><form onSubmit={handleSubmit}>
         <h1 style={{ 
           fontSize: "200%", 
           textAlign: "center", 
@@ -61,7 +60,7 @@ function Home() {
               Submit
             </Button>
           </div>
-      </form>}
+      </form>
         <CarPage vinProp={vinProp} handleSubmit={handleSubmit} clicked={clicked}/>
 
     </div>

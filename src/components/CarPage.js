@@ -11,24 +11,27 @@ function CarPage({vinProp, handleSubmit, clicked}) {
             const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=2011`);
             const newData = await response.json();
             setCarData(newData.Results);
-            console.log(carData)
         };
         fetchData();
         }, [handleSubmit, vinProp]);
 
     return (
         <div>
-            <h3 style={{
+                {clicked === true ?
+                <div style={{                
+                marginTop: "5%",
+                marginBottom: "8%"}}>
+
+                <h3 style={{
                 marginLeft: "10%",
                  padding: "1%",
                  letterSpacing: "0.1em"
                  }}>Results for Vin Number: {vinProp}</h3>
-                {clicked === true ?
                 <div style={{
                     display: 'flex', 
                     justifyContent: "center", 
                     width: "80%", 
-                    marginLeft: "1.09%", 
+                    marginLeft: "2%", 
                     marginRight: "5%"}}>
 
                     <CarImages/>
@@ -45,7 +48,7 @@ function CarPage({vinProp, handleSubmit, clicked}) {
                         <li>Fuel Type : {carData[77].Value}</li>
                         <li>Manufactor City: {carData[11].Value}</li>
                         <li>Manufactor Country : {carData[15].Value}</li>
-                    </ul>
+                    </ul></div>
                 </div>
             : "" }
         </div>

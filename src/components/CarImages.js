@@ -5,10 +5,17 @@ import React from "react";
 function CarImages() {
 
     // async function start() {
-    //     const images = await google.image('The Wolf Among Us', { safe: false });
-    //     console.info('Image Search:', images); 
-    //     }
-    
+    //     // A simple search
+    //     const res = await google.search('Stephen Hawking', {
+    //       page: 0,
+    //       safe: false,
+    //       additional_params: {
+    //         `https://www.google.com/search?q="nikola+tesla"`,
+    //         hl: 'en'
+    //       }
+    //     });
+    //     console.info('Search Results:', res)
+    // }
     //  start();
 
     return (

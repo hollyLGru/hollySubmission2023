@@ -8,10 +8,10 @@ const Navigation = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="relative" style={{backgroundColor: "#486e55", padding: "1.5%", marginBottom: "5%"}}>
+    <AppBar position="relative" style={{backgroundColor: "#303030", padding: "1.5%", marginBottom: "5%"}}>
       <Toolbar style={{fontSize: '120%'}}>
         <DirectionsCarIcon style={{ fontSize: '200%', marginRight: "1%"}}/>
-        <Typography variant="h4" style={{textShadow: "2px 2px 3px black", flexGrow: "8", fontWeight: "bold", letterSpacing: "0.4em", color: "gold" }}>
+        <Typography variant="h4" style={{textShadow: "2px 2px 3px brown", flexGrow: "8", fontWeight: "bold", letterSpacing: "0.4em", color: "gold" }}>
           VinTracker. 
         </Typography>
 

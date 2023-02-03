@@ -26,6 +26,7 @@ function CarPage({vinProp, handleSubmit, clicked, year}) {
                 display: 'flex',
                 justifyContent: "center",
                  letterSpacing: "0.1em"
+
                  }}>Results for Vin Number: {vinProp}</h3>
                 <CarImages carData={carData} year={year}/>
                 <div style={{

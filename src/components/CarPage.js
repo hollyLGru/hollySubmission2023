@@ -23,15 +23,15 @@ function CarPage({vinProp, handleSubmit, clicked, year}) {
                 marginBottom: "8%"}}>
 
                 <h3 style={{
-                marginLeft: "10%",
-                 padding: "1%",
+                display: 'flex',
+                justifyContent: "center",
                  letterSpacing: "0.1em"
                  }}>Results for Vin Number: {vinProp}</h3>
+                <CarImages carData={carData} year={year}/>
                 <div style={{
                     display: 'flex', 
                     justifyContent: "center"}}>
 
-                    <CarImages/>
                     <ul style={{margin: "2%"}}> 
                         <li>Make : {carData[7].Value} </li>
                         <li>Model : {carData[9].Value}</li>
@@ -47,6 +47,7 @@ function CarPage({vinProp, handleSubmit, clicked, year}) {
                         <li>Manufactor Country : {carData[15].Value}</li>
                     </ul></div>
                 </div>
+                
             : "" }
         </div>
 

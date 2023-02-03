@@ -4,8 +4,9 @@ import CarImages from './CarImages'
 function CarPage({vinProp, handleSubmit, clicked, chosenYear}) {
     const [carData, setCarData] = useState([]);
 
-    // calls api, returns values based on submitted VIN #. 
+    // calls nhtsa api and returns values based on submitted VIN #. 
     // Data about specific car is saved in variable 'carData'
+    // useEffect should only be rendered after handlesubmit and vinProp states are changed
     useEffect((carData, chosenYear) => {
         const fetchData = async () => {
             const response = await fetch(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinExtended/${vinProp}?format=json&modelyear=${chosenYear}`);
@@ -18,6 +19,7 @@ function CarPage({vinProp, handleSubmit, clicked, chosenYear}) {
 
     return (
         <div>
+            {/* this rendering is conditional based upon whether the submit was clicked in parent component */}
                 {clicked === true ?
                 <div style={{                
                 marginTop: "5%",
@@ -28,6 +30,7 @@ function CarPage({vinProp, handleSubmit, clicked, chosenYear}) {
                 justifyContent: "center",
                  letterSpacing: "0.1em"
 
+                //  the results for car is returned based on users inputs
                  }}>Results for Vin Number : <i><u>{vinProp}</u></i></h3>
                 <CarImages carData={carData} year={chosenYear}/>
                 <div style={{

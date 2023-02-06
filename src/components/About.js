@@ -26,10 +26,10 @@ class About extends Component {
                 padding: "2%",
                 float: "left"
               }}></img>
-              
+
 {/* silly NONFICTIONAL story about my time creating this project . Hope you enjoy!!*/}
             <p style={{color: "black", fontFamily: `'Fira Sans Extra Condensed', sans-serif`, lineHeight: '1.6'}}>
-              VinTracker was developed to make accessing users car details simple! Do you have your vehicle identification number 
+              VinTracker was developed to make accessing your car details simple! Do you have your vehicle identification number 
               but cannot remember the make or model of you car? Well thats pretty freakin' strange but here at VinTracker, 
               we never judge the obsecure and unsual circumstances of our users! This web application was built by the future
               professional developer, Holly Grudovich. It was no easy task, as she was battling post vacation blues

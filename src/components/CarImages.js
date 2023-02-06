@@ -7,6 +7,7 @@ function CarImages({carData, chosenYear}) {
     let url = `https://cdn.imagin.studio/getImage?customer=uszollege&make=${carData[7].Value}&modelFamily=${carData[9].Value}&modelYear=${chosenYear}`
     let urlTwo = `https://cdn.imagin.studio/getImage?customer=uszollege&make=${carData[7].Value}&modelFamily=${carData[9].Value}&modelYear=${chosenYear}&angle=05`
     let urlThree = `https://cdn.imagin.studio/getImage?customer=uszollege&make=${carData[7].Value}&modelFamily=${carData[9].Value}&modelYear=${chosenYear}&angle=13`
+    
     return (
         // I originally had the images displayed in a coursel but I believe the three images shown
         // simultaneously was more asthetically pleasing. 

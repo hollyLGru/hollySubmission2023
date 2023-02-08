@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/vinTracker/static/css/main.7fa15745.css",
+    "main.js": "/vinTracker/static/js/main.6a01b8c9.js",
+    "static/js/787.b49276aa.chunk.js": "/vinTracker/static/js/787.b49276aa.chunk.js",
+    "static/media/mepic.png": "/vinTracker/static/media/mepic.e200c2a9e7a0a915d3d1.png",
+    "static/media/carLogo.gif": "/vinTracker/static/media/carLogo.282ce67777e6715d10ad.gif",
+    "index.html": "/vinTracker/index.html",
+    "main.7fa15745.css.map": "/vinTracker/static/css/main.7fa15745.css.map",
+    "main.6a01b8c9.js.map": "/vinTracker/static/js/main.6a01b8c9.js.map",
+    "787.b49276aa.chunk.js.map": "/vinTracker/static/js/787.b49276aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fa15745.css",
+    "static/js/main.6a01b8c9.js"
+  ]
+}
